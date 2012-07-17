@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>City - {{ city.name }}</title>
+</head>
+<body>
+<h1>City - {{ city.name }}</h1>
+<ul>
+{% set wikiurl = "http://en.wikipedia.org/wiki/" + city.wikiname %}
+<li><strong>City:</strong> {{ city.name }}</li>
+<li><strong>Country:</strong> {{ city.country.name }}</li>
+<li><strong>Wikipedia page:</strong> <a href="{{ wikiurl }}">{{ wikiurl }}</a></li>
+<li><strong>Timezone:</strong> {{ city.timezone }}</li>
+<li><strong>Latitude + Longitude:</strong> {{ city.latitude }}, {{ city.longitude }}</li>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox={{ city.longitude - 0.5 }},{{ city.latitude - 0.5 }},{{ city.longitude + 0.5 }},{{ city.latitude + 0.5 }}&amp;marker={{ city.longitude }},{{ city.latitude }}&amp;layer=mapnik" style="border: 1px solid black"></iframe><br /><small><a href="http://www.openstreetmap.org/?lat={{ city.latitude }}&amp;lon={{ city.longitude }}&amp;mlat={{ city.latitude }}&amp;mlon={{ city.longitude }}&amp;zoom=11&amp;layers=M">View Larger Map</a></small>
+</ul>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>City list - {{ country.name }}</title>
+</head>
+<body>
+<h1>City list - {{ country.name }}</h1>
+<ol>
+{% with %}
+{% set cities = country.cities.all() %}
+{% for city in cities|sort(attribute='name') %}
+<li><a href="/cities/{{ city.slug }}/">{{city.name}}</a></li>
+{% endfor %}
+{% endwith %}
+</ol>
+</body>
+</html>
