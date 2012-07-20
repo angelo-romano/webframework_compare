@@ -7,7 +7,6 @@ setup.cfg
 setup.py
 triplander2/__init__.py
 triplander2/models.py
-triplander2/tests.py
 triplander2/views.py
 triplander2.egg-info/PKG-INFO
 triplander2.egg-info/SOURCES.txt
@@ -27,4 +26,8 @@ triplander2/static/pylons.css
 triplander2/static/pyramid-small.png
 triplander2/static/pyramid.png
 triplander2/static/transparent.gif
+triplander2/templates/city.mak
+triplander2/templates/city_list.mak
+triplander2/templates/country.mak
+triplander2/templates/country_list.mak
 triplander2/templates/mytemplate.pt

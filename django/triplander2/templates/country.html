@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Country - {{ country.name }}</title>
+</head>
+<body>
+<h1>{{ country.name }}</h1>
+<ul>
+{% with "http://en.wikipedia.org/wiki/"|add:country.wikiname as wikiurl %}
+<li><strong>Country code:</strong> {{ country.code }}</li>
+<li><strong>Currency:</strong> {{ country.currency }}</li>
+<li><strong>Wikipedia page:</strong> <a href="{{ wikiurl }}">{{ wikiurl }}</a></li>
+<li><strong>List of cities:</strong> <a href="/countries/{{ country.slug }}/cities/">here</a></strong></li>
+{% endwith %}
+</ul>
+</body>
+</html>

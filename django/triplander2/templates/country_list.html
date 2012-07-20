@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Country list</title>
+</head>
+<body>
+<h1>Country list</h1>
+<ol>
+{% for country in countries %}
+<li><a href="/countries/{{ country.slug }}/">{{country.name}}</a></li>
+{% endfor %}
+</ol>
+</body>
+</html>

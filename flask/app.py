@@ -20,8 +20,8 @@ def list_country_cities(country_slug):
     return render_template('city_list.html', country=country)
 
 
-@app.route('/countries/<country_slug>/cities/<city_slug>')
-def show_city(country_slug):
+@app.route('/countries/<country_slug>/cities/<city_slug>/')
+def show_city(country_slug, city_slug):
     city = City.query.filter_by(slug=city_slug).first()
     return render_template('city.html', city=city)
 

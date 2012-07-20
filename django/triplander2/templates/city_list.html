@@ -5,12 +5,13 @@
 <body>
 <h1>City list - {{ country.name }}</h1>
 <ol>
-{% with %}
-{% set cities = country.cities.all() %}
-{% for city in cities|sort(attribute='name') %}
+{% comment %}
+I can get cities from a country (with country.cities.all as cities), but
+I can't sort them. So here we are.
+{% endcomment %}
+{% for city in cities %}
 <li><a href="/countries/{{ country.slug }}/cities/{{ city.slug }}/">{{city.name}}</a></li>
 {% endfor %}
-{% endwith %}
 </ol>
 </body>
 </html>

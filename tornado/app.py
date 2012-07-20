@@ -30,5 +30,7 @@ if __name__ == '__main__':
         (r"/countries/(.*)/", CountryHandler),
         (r"/countries/", CountryListHandler),
     ])
-    app.listen(8888)
+    port = 8888
+    app.listen(port)
+    print('Listening on port %s' % port)
     tornado.ioloop.IOLoop.instance().start()
